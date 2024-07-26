@@ -1,0 +1,26 @@
+DataScience-AI/ML Git repo:
+    https://github.com/nursnaaz/FutureDataScienceLegends/tree/main
+
+The Evolution of Artificial Intelligence: From Dreams to Reality
+    https://medium.com/@ainyradevelop/the-evolution-of-artificial-intelligence-from-dreams-to-reality-9921353f6cde
+
+Variable’s memory size in Python
+    https://www.askpython.com/python/built-in-methods/variables-memory-size-in-python
+    
+Python List solved exercises
+    https://medium.com/@nishithakalathil/python-list-solved-exercises-9d117dd761b6
+
+Demystifying the Dice Roll: A Guide to Discrete and Continuous Probability Distributions
+    https://www.linkedin.com/pulse/demystifying-dice-roll-guide-discrete-continuous-penjandra-gepfc/
+
+Everything you need to know about Hypothesis Testing in Machine Learning
+    https://www.analyticsvidhya.com/blog/2021/09/hypothesis-testing-in-machine-learning-everything-you-need-to-know/
+
+Hypothesis testing in Machine learning using Python
+    https://towardsdatascience.com/hypothesis-testing-in-machine-learning-using-python-a0dc89e169ce
+
+P-Value in Statistical Hypothesis Tests
+    https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/p-value/
+
+NumPy Cheat Sheet: Data Analysis in Python
+    https://www.datacamp.com/cheat-sheet/numpy-cheat-sheet-data-analysis-in-python
