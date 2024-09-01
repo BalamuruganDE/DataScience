@@ -1,5 +1,5 @@
-Do we need to scaling to encoded featues especially one-hot encoded and boolean encoding
+Do we need to scaling to encoded featues especially one-hot encoded and boolean encoding - 
 chk_df=pd.concat([train_data_X_scaled_cols,train_y]) - get NaN valus and the dimension increased
-How to verify the preproceesing pipeline
+How to verify the preproceesing pipeline - named_steps
 assumption doesn't match for linear regression for bigmart
-what steps to be added as part pipelines and what shouldn't eg: date to age conversion,train_test_split
+what steps to be added as part pipelines and what shouldn't eg: date to age conversion,train_test_split - Yes but we need write custom codes
