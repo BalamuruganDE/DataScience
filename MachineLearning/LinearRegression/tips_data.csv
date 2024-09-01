@@ -1,0 +1,4 @@
+no_of_customers,no_of_server,bill_amt,tips_amt
+10,3,10000,500
+5,2,10000,1000
+25,5,15000,1000

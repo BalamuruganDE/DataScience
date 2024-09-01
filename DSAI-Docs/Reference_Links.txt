@@ -6,7 +6,7 @@ The Evolution of Artificial Intelligence: From Dreams to Reality
 
 Variable’s memory size in Python
     https://www.askpython.com/python/built-in-methods/variables-memory-size-in-python
-    
+
 Python List solved exercises
     https://medium.com/@nishithakalathil/python-list-solved-exercises-9d117dd761b6
 
@@ -24,3 +24,13 @@ P-Value in Statistical Hypothesis Tests
 
 NumPy Cheat Sheet: Data Analysis in Python
     https://www.datacamp.com/cheat-sheet/numpy-cheat-sheet-data-analysis-in-python
+
+Imran Github
+https://github.com/imohamedimran/Data-Science-Training-Testleaf/blob/master/Linear%20Regression/Demand_txn_modeling.ipynb
+
+
+Imran'S Linked in-profile
+https://www.linkedin.com/in/imohamedimran/
+
+Important Gen-AI LLM Models:
+    chatGPT,perplexity ai,claude ai,openrouter.ai,Gemini,copilot,mistral
