@@ -3,3 +3,23 @@ chk_df=pd.concat([train_data_X_scaled_cols,train_y]) - get NaN valus and the dim
 How to verify the preproceesing pipeline - named_steps
 assumption doesn't match for linear regression for bigmart
 what steps to be added as part pipelines and what shouldn't eg: date to age conversion,train_test_split - Yes but we need write custom codes
+
+
+
+1. Preprocessing
+2. Modelling (Linear Regression)
+3. saving and loading the model
+4. Pipeline 
+5. Pipeline -> saving and loading the model
+6. FastAPI
+7. Deploying using FastAPI
+8. Used Docker to deploy using FastAPI in local
+9. Pushed the docker image to the docker hub
+10. Pulling the docker image and run the docker in local
+
+
+1. Deploy in the cloud (AWS, GCP, Azure)
+2. Deploy using docker in GCP(Cloud Run) and AWS(Kubernetes) 
+3. CI/CD pipeline with Git
+
+

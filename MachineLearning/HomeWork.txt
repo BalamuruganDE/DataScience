@@ -1,0 +1,4 @@
+1-Sep-2024:
+    1) Medium doc on Fast API
+    2) Medium doc on Fast API on Docker container
+    3) FastAPI and Docker container implementation
