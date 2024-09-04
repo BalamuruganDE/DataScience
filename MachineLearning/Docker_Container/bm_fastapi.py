@@ -26,7 +26,8 @@ class Output(BaseModel):
 @app.post("/predict-model",response_model=Output)
 def predict(data:Input)->Output:
     X_input=pd.DataFrame([data.model_dump()])
-    model = joblib.load('../Linear_regression_practice/bm_pipeline.pkl')
+    # model = joblib.load('../Linear_regression_practice/bm_pipeline.pkl')
+    model = joblib.load('bm_pipeline.pkl')
     test_pred = model.predict(X_input)
     return Output(predicted_output=round(float(test_pred),2))
 
