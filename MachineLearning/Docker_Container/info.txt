@@ -19,3 +19,9 @@ pulling coder image from repo --> docker pull balamurugande/datascience:bm_fasta
 
 removing existing local docker images --> docker rmi <tag:release> or  docker rmi <IMAGE_ID>
 
+
+My docker image name:
+
+balamurugande/datascience:bm_fastapi-1.3
+
+
