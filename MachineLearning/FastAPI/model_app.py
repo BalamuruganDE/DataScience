@@ -6,18 +6,19 @@ import numpy as np
 app = FastAPI()
 
 class Input(BaseModel):
-    X:float
+    input:float
 
 class Output(BaseModel):
-    y:float
+    output:float
     slope:float
     intercept:float
 
+model = joblib.load('pipline_lr_deploy.pkl')
+
 @app.post("/predict")
 def predict(data:Input)->Output:
-    X_input=np.array([[data.X]])
-    model = joblib.load('pipline_lr_deploy.pkl')
+    X_input=np.array([[data.input]])
     prediction = model.predict(X_input)
     intercept = model.named_steps['model'].intercept_
     slope = model.named_steps['model'].coef_
-    return Output(y=prediction,slope=slope,intercept=intercept)
+    return Output(output=prediction,slope=slope,intercept=intercept)

@@ -34,3 +34,11 @@ https://www.linkedin.com/in/imohamedimran/
 
 Important Gen-AI LLM Models:
     chatGPT,perplexity ai,claude ai,openrouter.ai,Gemini,copilot,mistral
+
+
+
+
+
+Medium links
+
+https://medium.com/@bala.rhapsodic/fastapi-for-machine-learning-models-2278d92668aa
