@@ -3,11 +3,18 @@ import pandas as pd
 import joblib
 import numpy as np
 from pydantic import BaseModel
+from os import environ as env
+
+secret_key = env.get('KEY','default_secret_key')
+secret_key = env.get('KEY', 'default_secret_key')
+print('Using secret key: ',secret_key)
+print(f'Using secret key: {secret_key}')
 
 app = FastAPI()
 
 
 class Input(BaseModel):
+    Key:str
     Item_Identifier:object
     Item_Weight:float
     Item_Fat_Content:object
@@ -22,14 +29,19 @@ class Input(BaseModel):
 
 class Output(BaseModel):
     predicted_output:float
+    status:str 
 
 @app.post("/predict-model",response_model=Output)
 def predict(data:Input)->Output:
-    X_input=pd.DataFrame([data.model_dump()])
-    # model = joblib.load('../Linear_regression_practice/bm_pipeline.pkl')
-    model = joblib.load('bm_pipeline.pkl')
-    test_pred = model.predict(X_input)
-    return Output(predicted_output=round(float(test_pred),2))
+    if (data.Key !=secret_key):
+        print ("Invalid key passed!!!")
+        return Output(predicted_output=-0.0,status= "Model execution Failed!!")
+    else:
+        X_input=pd.DataFrame([data.model_dump()])
+        # model = joblib.load('../Linear_regression_practice/bm_pipeline.pkl')
+        model = joblib.load('bm_pipeline.pkl')
+        test_pred = model.predict(X_input)
+        return Output(predicted_output=round(float(test_pred),2),status= "Model Successfully Executed!!")
 
 # @app.post("/predict")
 # def predict(data:input):

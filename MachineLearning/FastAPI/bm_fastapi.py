@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import numpy as np
 from pydantic import BaseModel
-
+from os import environ as env
 app = FastAPI()
 
 
