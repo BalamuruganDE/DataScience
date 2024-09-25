@@ -10,14 +10,19 @@ st.write("This is a test")
 
 df = pd.read_csv('data.csv')
 
+min_year = df['YEAR'].min()
+max_year = df['YEAR'].max()
+
+
 # CONSOLE = st.text_input('CONSOLE') 
 CONSOLE = st.selectbox('CONSOLE',pd.unique(df['CONSOLE']))
-YEAR = st.number_input('YEAR',step=1,value=df['YEAR'].min())
+# YEAR = st.number_input('YEAR',step=1,min_value=min_year,max_value=max_year,value=min_year)
+YEAR = st.number_input('YEAR',step=1,min_value=df['YEAR'].min(),max_value=df['YEAR'].max(),value=df['YEAR'].min())
 CATEGORY = st.selectbox('CATEGORY',pd.unique(df['CATEGORY']))
 PUBLISHER = st.selectbox('PUBLISHER',pd.unique(df['PUBLISHER']))
 RATING = st.selectbox('RATING',pd.unique(df['RATING']))
-CRITICS_POINTS = st.number_input('CRITICS_POINTS',step=0.1)
-USER_POINTS = st.number_input('USER_POINTS',step=0.1)
+CRITICS_POINTS = st.number_input('CRITICS_POINTS',step=0.1,min_value=0.000)
+USER_POINTS = st.number_input('USER_POINTS',step=0.1,min_value=0.000)
 
 inputs={
     'CONSOLE':CONSOLE,
