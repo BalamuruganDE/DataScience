@@ -37,8 +37,15 @@ Important Gen-AI LLM Models:
 
 
 
+SVM vedio link:
+https://www.youtube.com/watch?app=desktop&v=Lpr__X8zuE8
+
 
 
 Medium links
 
 https://medium.com/@bala.rhapsodic/fastapi-for-machine-learning-models-2278d92668aa
+
+
+
+
