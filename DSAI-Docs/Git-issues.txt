@@ -1,0 +1,11 @@
+
+1) While pushing to my origin am facing below error, what is the issue here?
+
+> git push origin main:main
+send-pack: unexpected disconnect while reading sideband packet
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
+
+Solution: 
+git config http.postBuffer 524288000
+git push origin main:main
