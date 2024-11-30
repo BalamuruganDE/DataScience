@@ -1,3 +1,8 @@
+# creating api endpoints using fastapi
+
+#load libraires
+
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 import pandas as pd
@@ -44,7 +49,7 @@ def predict(data:input)->output:
        'Previously_Insured', 'Vehicle_Age', 'Vehicle_Damage', 'Annual_Premium',
        'Policy_Sales_Channel', 'Vintage']
     
-    model = joblib.load('cross-sell-pred-pkl.gz')
+    model = joblib.load('../cross-sell-pred-pkl.gz')
     prediction = model.predict(X_input)
 
     return output(Response=prediction)
@@ -79,5 +84,18 @@ Policy_Sales_Channel    float64
 Vintage                   int64
 Response                  int64
 
+
+{
+  "Gender": "Male",
+  "Age": 44,
+  "Driving_License": 1,
+  "Region_Code": 28.0,
+  "Previously_Insured": 0,
+  "Vehicle_Age": "> 2 Years",
+  "Vehicle_Damage": "Yes",
+  "Annual_Premium": 40454,
+  "Policy_Sales_Channel": 26,
+  "Vintage": 217
+}
 
 '''
