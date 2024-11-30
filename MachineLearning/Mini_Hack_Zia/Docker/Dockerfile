@@ -1,0 +1,35 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY . /app
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 80
+
+CMD ["uvicorn","model_app:app","--port","80","--host","0.0.0.0"]
+
+
+#### Docker commands and notes
+
+### building/creating image 
+### command --> docker build -t api-test:1.0 .
+
+### login to dockerhub which is the docker central repository
+### Command
+### login to docker repo/hub --> docker login
+### or 
+### login to docker repo/hub --> docker login -u balamurugande
+
+## enter the password and wait for 2 mins it will promot message as "Login Succeeded"
+
+### Creating a tag for the local image and mapping it with the dockerhub repo
+### comamnd --> docker tag api-test:1.0 balamurugande/api-test:1.0 
+
+### Pushing the local image to dockerhub repo
+### comamnd --> docker push balamurugande/api-test:1.0
+
+### Running a docker image:
+### syntax: docker run -p <port:port> <tag:with_version>
+### Command: docker run -p 80:80 bm_fastapi:1.2 
