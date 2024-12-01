@@ -28,7 +28,7 @@ class input(BaseModel):
     
 
 class output(BaseModel):
-    Response                :   int
+    Response                :   object
 
 @app.post("/predict")
 def predict(data:input)->output:
@@ -50,10 +50,18 @@ def predict(data:input)->output:
        'Policy_Sales_Channel', 'Vintage']
     
     # model = joblib.load('../cross-sell-pred-pkl.gz')
-    model = joblib.load('../cross-sell-pred-pkl.gz')
+    model = joblib.load('cross-sell-pred-xgb-pkl.gz')
     prediction = model.predict(X_input)
+    
+    if prediction == 0:
+        op="Customer is NOT INTERESTED  in buying Vehicle Insurance"
+        return output(Response=op)
+    else:
+        op="Customer is INTERESTED  in buying Vehicle Insurance"
+        return output(Response=op)
 
-    return output(Response=prediction)
+   
+
 
 
 '''

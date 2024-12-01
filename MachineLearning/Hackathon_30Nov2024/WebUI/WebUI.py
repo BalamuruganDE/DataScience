@@ -64,7 +64,7 @@ if upload_file is not None:
     st.write(df.head(2))
 
     if st.button("Predict the uploaded file"):
-        df['is_promoted'] = model.predict (df)
+        df['Response'] = model.predict (df)
         st.write("Prediction completed")
         st.write(df.head(2))
         
