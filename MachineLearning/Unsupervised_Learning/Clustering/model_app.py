@@ -33,3 +33,10 @@ if st.button('submit'):
 
     #write the ouput
     st.write(f'Predicted input belongs to cluster:{prediction}')
+
+
+
+'''
+!streamlit run model_app.py --> For running streamlit application
+!pip install streamlit -q --> For installing streamlit in quite mode
+'''
