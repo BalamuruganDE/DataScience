@@ -1,0 +1,12 @@
+1) 
+
+
+
+npx command to run web server local and expose gloablly
+
+--> npx localtunnel --port 8501
+
+To get tunnel password 
+--> curl ipv4.icanhazip.com
+
+

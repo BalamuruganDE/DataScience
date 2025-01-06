@@ -21,22 +21,26 @@ for col in df.drop(columns=['CUST_ID']).columns:
         f'select a value for {col}'
     )
 
-picklefile = ''
+picklefile = 'model_kmeans_k4.pkl'
 
 if st.button('submit'):
     #load model
     model = joblib.load (picklefile)
 
     input_data = list(selected_values.values())
+
+    print('input1:\n',input_data)
+    
+    input_data = [list(selected_values.values())]
+
+    print('input2:\n',input_data)
+    
     #prediction
     prediction = model.predict(input_data)
 
     #write the ouput
-    st.write(f'Predicted input belongs to cluster:{prediction}')
+    st.write(f'Predicted input belongs to cluster:{prediction[0]}')
 
 
-
-'''
-!streamlit run model_app.py --> For running streamlit application
-!pip install streamlit -q --> For installing streamlit in quite mode
-'''
+### !streamlit run model_app.py --> For running streamlit application
+### !pip install streamlit -q --> For installing streamlit in quite mode
